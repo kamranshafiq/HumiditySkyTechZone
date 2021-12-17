@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.SettingActivity">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/back_arrow"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cardBackgroundColor="@color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_arrow_left" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:id="@+id/bgBottom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <View
+            android:id="@+id/bgTop"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/setting_panal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ad_view_container"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:padding="5dp">
+
+                        <RadioButton
+                            android:id="@+id/setting_fahrenheit"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/thin_hint"
+                            android:text="@string/temp_fahrenheit_setting"
+                            android:textColor="@color/black"
+                            android:textSize="16.0sp"
+                            app:buttonTint="@color/black" />
+
+                        <RadioButton
+                            android:id="@+id/setting_celsius"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:hint="@string/thin_hint"
+                            android:text="@string/temp_celsius_setting"
+                            android:textColor="@color/black"
+                            android:textSize="16.0sp"
+                            app:buttonTint="@color/black" />
+                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:layout_marginTop="5.0dip"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/setting_color"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:checked="true"
+                                android:hint="@string/thin_hint"
+                                android:text="@string/color_setting"
+                                android:textColor="@color/black"
+                                android:textSize="16.0sp"
+                                app:buttonTint="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/picker_sample"
+                                android:layout_width="25.0dip"
+                                android:layout_height="25.0dip"
+                                android:layout_gravity="center|right"
+                                android:layout_marginRight="10.0dip"
+                                android:background="@drawable/picker_shape_black"
+                                android:clickable="false" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0px"
+                            android:layout_marginTop="5.0dip"
+                            android:background="#22ffffff" />
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/picker_panel"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#66000000"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="20.0dip"
+                android:background="@drawable/popup_bg"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="8.0dip"
+                android:paddingBottom="8.0dip">
+
+                <com.larswerkman.holocolorpicker.ColorPicker
+                    android:id="@+id/picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginTop="5.0dip"
+                    android:background="#22ffffff" />
+
+                <com.larswerkman.holocolorpicker.SVBar
+                    android:id="@+id/svbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.larswerkman.holocolorpicker.OpacityBar
+                    android:id="@+id/opacitybar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:layout_marginTop="5.0dip"
+                    android:background="#22ffffff" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/picker_cancel"
+                        android:layout_width="0.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/config_button_bg_selector"
+                        android:hint="@string/thin_hint"
+                        android:text="@string/cancel"
+                        android:textColor="#ccffffff" />
+
+                    <Button
+                        android:id="@+id/picker_save"
+                        android:layout_width="0.0dip"
+                        android:layout_height="40.0dip"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginTop="5.0dip"
+                        android:layout_marginRight="20.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/config_button_bg_selector"
+                        android:hint="@string/thin_hint"
+                        android:text="@string/ok"
+                        android:textColor="#ccffffff" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@id/ad_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+
+    </RelativeLayout>
+</layout>

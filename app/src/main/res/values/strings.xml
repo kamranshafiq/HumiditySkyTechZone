@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="admob_app_id">ca-app-pub-5632406496912407~8443564901</string>
+    <string name="admob_banner_ad_unit_id">ca-app-pub-5632406496912407/1221526919</string>
+    <string name="admob_interstitial_id">ca-app-pub-5632406496912407/1630938067</string>
+
+    <!--    Test-->
+
+<!--    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>-->
+<!--    <string name="admob_banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>-->
+
+    <string name="app_name">Humidity</string>
+
+
+    <string name="cancel">Cancel</string>
+    <string name="color_setting">USE CUSTOM BACKGROUND COLOR</string>
+    <string name="ok">Ok</string>
+    <string name="temp_celsius_setting">TEMPERATURE IN CELSIUS</string>
+    <string name="temp_fahrenheit_setting">TEMPERATURE IN FAHRENHEIT</string>
+    <string name="thin_hint">thin</string>
+    <string name="todo">todo</string>
+
+
+    <string name="menu_terms">Terms of Service</string>
+    <string name="accept_and_continue">ACCEPT AND CONTINUE</string>
+    <string name="permission_disclosure">Permission Disclosure</string>
+    <string name="termsOfServiceSummery">This app is governed by SkyTechZone Terms of Service. By continuing to use this app you represent that you have read and accept the Terms of Service, Privacy Policy and Permission disclosure.</string>
+    <string name="privacy_policy">Privacy Policy</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ff2196f3</color>
+    <color name="colorPrimary">#5e3293</color>
+    <color name="colorPrimaryDark">#56298C</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="cold1">#ff0177da</color>
+    <color name="cold2">#ff4c4bbd</color>
+    <color name="cold3">#ff1a1874</color>
+
+    <color name="hot1">#ffe5410a</color>
+    <color name="hot2">#ffd40600</color>
+    <color name="hot3">#ffa30000</color>
+
+    <color name="neutral">#ff37a80f</color>
+
+
+    <color name="humidity">#DDE0F6</color>
+    <color name="weather">#FAF5C9</color>
+    <color name="phone">#FFC3BE</color>
+    <color name="setting">#CEB3FF</color>
+    <color name="privy">#9CD3FF</color>
+
+</resources>
