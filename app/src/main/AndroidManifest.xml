@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
+        android:name=".adsutils.MyApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:hardwareAccelerated="true"
@@ -17,9 +18,19 @@
         android:networkSecurityConfig="@xml/netwrok_security_config"
         android:supportsRtl="true">
         <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppCompatTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".ui.DisclousreActivity"
-            android:theme="@style/AppCompatTheme"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppCompatTheme" />
         <activity
             android:name=".ui.MobileActivity"
             android:exported="true"
@@ -32,14 +43,10 @@
             android:theme="@style/AppCompatTheme" />
         <activity
             android:name=".ui.DashboardActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppCompatTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.SettingActivity"

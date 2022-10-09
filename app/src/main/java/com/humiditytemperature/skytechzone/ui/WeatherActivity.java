@@ -39,6 +39,7 @@ import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.measurement.api.AppMeasurementSdk;
 import com.humiditytemperature.skytechzone.BuildConfig;
+
 import com.humiditytemperature.skytechzone.adsutils.AdmobAdsUtils;
 import com.humiditytemperature.skytechzone.adsutils.OnIntersitialAdListener;
 import com.humiditytemperature.skytechzone.utils.BitmapsDrawable;
@@ -357,7 +358,7 @@ public class WeatherActivity extends AppCompatActivity implements LocationListen
             }
         });
         activityWeatherBinding.txvFragmentTodayCUnit.setOnClickListener(new View.OnClickListener() {
-            /* class com.thermometer.devsoltechnology.ui.outdoor.OutdoorFragment.AnonymousClass2 */
+
 
             public void onClick(View view) {
                 try {

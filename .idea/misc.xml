@@ -3,14 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/drawable-/square_white.xml" value="0.15648148148148147" />
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/drawable/square_white.xml" value="0.1125" />
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/layout/activity_dashboard.xml" value="0.1322463768115942" />
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/layout/activity_disclousre.xml" value="0.14" />
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/layout/activity_humidity.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/layout/activity_mobile.xml" value="0.1322463768115942" />
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/layout/activity_setting.xml" value="0.20416666666666666" />
-        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/Humidity SkyHigh/app/src/main/res/layout/activity_weather.xml" value="0.1322463768115942" />
+        <entry key="..\:/Android Developer/SkyHigh/Humidity SkyHigh/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>

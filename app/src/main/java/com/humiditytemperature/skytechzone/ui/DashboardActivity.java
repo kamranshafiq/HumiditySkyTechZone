@@ -7,33 +7,18 @@ import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.TextView;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.LoadAdError;
-import com.google.android.gms.ads.MobileAds;
-import com.google.android.gms.ads.VideoOptions;
-import com.google.android.gms.ads.initialization.InitializationStatus;
-import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.ads.nativead.MediaView;
-import com.google.android.gms.ads.nativead.NativeAd;
-import com.google.android.gms.ads.nativead.NativeAdOptions;
-import com.google.android.gms.ads.nativead.NativeAdView;
+
 import com.humiditytemperature.skytechzone.adsutils.AdmobAdsUtils;
 import com.humiditytemperature.skytechzone.adsutils.OnIntersitialAdListener;
 import com.humiditytemperature.skytechzone.utils.BitmapsDrawable;
@@ -51,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         activityDashboardBinding = DataBindingUtil.setContentView(this, R.layout.activity_dashboard);
         if (this.prefs == null) {
@@ -60,12 +45,8 @@ public class DashboardActivity extends AppCompatActivity {
         }
         switchBackground(BitmapsDrawable.getRoundedRectangleDrawableForColor(prefs.getBackgroundColor(), DashboardActivity.this), prefs.getBackgroundColor());
         // Initialize the Mobile Ads SDK.
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-                AdmobAdsUtils.getInstance(DashboardActivity.this).initAds(DashboardActivity.this);
-            }
-        });
+
+
 
         adContainerView = findViewById(R.id.ad_view_container);
 
@@ -81,7 +62,7 @@ public class DashboardActivity extends AppCompatActivity {
         activityDashboardBinding.humidityLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd(new OnIntersitialAdListener() {
+                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd( new OnIntersitialAdListener() {
                     @Override
                     public void onAdFailded() {
                         startActivity(new Intent(DashboardActivity.this, HumidityActivity.class));
@@ -100,7 +81,7 @@ public class DashboardActivity extends AppCompatActivity {
         activityDashboardBinding.setttingLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd(new OnIntersitialAdListener() {
+                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd( new OnIntersitialAdListener() {
                     @Override
                     public void onAdFailded() {
                         startActivity(new Intent(DashboardActivity.this, SettingActivity.class));
@@ -119,7 +100,7 @@ public class DashboardActivity extends AppCompatActivity {
         activityDashboardBinding.weatherLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd(new OnIntersitialAdListener() {
+                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd( new OnIntersitialAdListener() {
                     @Override
                     public void onAdFailded() {
                         startActivity(new Intent(DashboardActivity.this, WeatherActivity.class));
@@ -138,7 +119,7 @@ public class DashboardActivity extends AppCompatActivity {
         activityDashboardBinding.phoneLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd(new OnIntersitialAdListener() {
+                AdmobAdsUtils.getInstance(DashboardActivity.this).showIntersitialAd( new OnIntersitialAdListener() {
                     @Override
                     public void onAdFailded() {
                         startActivity(new Intent(DashboardActivity.this, MobileActivity.class));
@@ -219,7 +200,9 @@ public class DashboardActivity extends AppCompatActivity {
 
     }
 
-    /** Called when leaving the activity */
+    /**
+     * Called when leaving the activity
+     */
     @Override
     public void onPause() {
         if (adView != null) {
@@ -229,8 +212,9 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
 
-
-    /** Called before the activity is destroyed */
+    /**
+     * Called before the activity is destroyed
+     */
     @Override
     public void onDestroy() {
         if (adView != null) {

@@ -131,10 +131,10 @@
                 app:showUnit="true"
                 app:speed="0"
                 app:speedTextColor="@android:color/holo_blue_light"
-                app:speedTextSize="@dimen/_35sdp"
+                app:speedTextSize="@dimen/_27sdp"
                 app:unit=" %"
                 app:unitTextColor="@android:color/holo_blue_light"
-                app:unitTextSize="@dimen/_10sdp" />
+                app:unitTextSize="@dimen/_9sdp" />
 
         </androidx.cardview.widget.CardView>
 

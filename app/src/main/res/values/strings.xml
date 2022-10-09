@@ -2,15 +2,22 @@
 <resources>
 
 
-    <string name="admob_app_id">ca-app-pub-5632406496912407~8443564901</string>
-    <string name="admob_banner_ad_unit_id">ca-app-pub-5632406496912407/1221526919</string>
-    <string name="admob_interstitial_id">ca-app-pub-5632406496912407/1630938067</string>
+    <!--    <string name="admob_app_id">ca-app-pub-5632406496912407~8443564901</string>-->
+    <!--    <string name="admob_banner_ad_unit_id">ca-app-pub-5632406496912407/1221526919</string>-->
+    <!--    <string name="admob_interstitial_id">ca-app-pub-5632406496912407/1630938067</string>-->
 
     <!--    Test-->
 
-<!--    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>-->
-<!--    <string name="admob_banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>-->
-<!--    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>-->
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_banner_ad_unit_id" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="admob_openapp_unit_id" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+
+<!--    <string name="fb_intersitial" translatable="false">YOUR_PLACEMENT_ID</string>-->
+
+
+    <!--    <string name="fb_intersitial" translatable="false">705460680777317_705464417443610</string>-->
+
 
     <string name="app_name">Humidity</string>
 
